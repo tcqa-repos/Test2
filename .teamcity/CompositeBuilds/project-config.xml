@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Composite Builds</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_1" type="versionedSettings">
+      <parameters>
+        <param name="buildSettings" value="ALWAYS_USE_CURRENT" />
+        <param name="credentialsStorageType" value="credentialsJSON" />
+        <param name="enabled" value="true" />
+        <param name="rootId" value="HttpsGithubComTcqaReposVersionedSettings" />
+        <param name="showChanges" value="false" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_40" type="buildtype-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Artifacts Size",
+    "key": "VisibleArtifactsSize"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="New chart title" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_41" type="JetBrains.SharedResources">
+      <parameters>
+        <param name="enabled" value="true" />
+        <param name="id" value="PROJECT_EXT_41" />
+        <param name="locks-param" value="" />
+        <param name="name" value="quota" />
+        <param name="quota" value="1" />
+        <param name="type" value="quoted" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_44" type="JetBrains.SharedResources">
+      <parameters>
+        <param name="locks-param" value="" />
+        <param name="name" value="testResource" />
+        <param name="quota" value="-1" />
+        <param name="type" value="quoted" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_45" type="JetBrains.SharedResources">
+      <parameters>
+        <param name="locks-param" value="" />
+        <param name="name" value="value" />
+        <param name="type" value="custom" />
+        <param name="values" value="aaa" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+

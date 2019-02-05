@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<build-type xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>Tests 2</name>
+  <description />
+  <settings>
+    <parameters />
+    <build-runners>
+      <runner id="RUNNER_1" name="" type="simpleRunner">
+        <parameters>
+          <param name="script.content"><![CDATA[echo "##teamcity[testStarted name='pack.Test1' captureStandardOutput='false']"
+echo "##teamcity[testFailed name='pack.Test1' duration='138']"
+echo "##teamcity[testStarted name='pack1.Test2' captureStandardOutput='false']"
+echo "##teamcity[testFinished name='pack1.Test2' duration='128']"
+echo "##teamcity[testStarted name='pack1.Test3' captureStandardOutput='false']"
+echo "##teamcity[testFinished name='pack1.Test3' duration='3000']"
+echo "##teamcity[testStarted name='pack1.Test3' captureStandardOutput='false']"
+echo "##teamcity[testFinished name='pack1.Test3' duration='2000']"]]></param>
+          <param name="teamcity.step.mode" value="default" />
+          <param name="use.custom.script" value="true" />
+        </parameters>
+      </runner>
+    </build-runners>
+    <vcs-settings>
+      <vcs-entry-ref root-id="HttpsGithubComJuliaReshMyProject_2" />
+    </vcs-settings>
+    <requirements />
+    <build-triggers />
+    <dependencies>
+      <depend-on sourceBuildTypeId="CompositeBuilds_MySimpleProject_SubProjectB_SubSubProject_Tests2">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+      <depend-on sourceBuildTypeId="CompositeBuilds_MySimpleProject_SubProjectB_Tests21">
+        <options>
+          <option name="run-build-if-dependency-failed" value="RUN_ADD_PROBLEM" />
+          <option name="take-started-build-with-same-revisions" value="true" />
+          <option name="take-successful-builds-only" value="true" />
+        </options>
+      </depend-on>
+    </dependencies>
+    <cleanup />
+  </settings>
+</build-type>
+

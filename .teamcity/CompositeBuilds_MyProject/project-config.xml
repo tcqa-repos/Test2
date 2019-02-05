@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" parent-id="CompositeBuilds" xsi:noNamespaceSchemaLocation="http://www.jetbrains.com/teamcity/schemas/2018.1/project-config.xsd">
+  <name>My Project</name>
+  <parameters />
+  <project-extensions>
+    <extension id="PROJECT_EXT_28" type="project-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Number of Failed Tests",
+    "sourceBuildTypeId": "CompositeBuilds8_MyProject_BuildWithDuplicates",
+    "key": "FailedTestCount"
+  },
+  {
+    "type": "valueType",
+    "title": "Build Checkout Time",
+    "key": "buildStageDuration:sourcesUpdate"
+  },
+  {
+    "type": "valueType",
+    "title": "BuildTestStatus",
+    "key": "BuildTestStatus"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="Chart title" />
+      </parameters>
+    </extension>
+    <extension id="PROJECT_EXT_39" type="project-graphs">
+      <parameters>
+        <param name="format" value="text" />
+        <param name="series"><![CDATA[[
+  {
+    "type": "valueType",
+    "title": "Code Duplicates",
+    "sourceBuildTypeId": "CompositeBuilds8_MyProject_BuildWithDuplicates",
+    "key": "DuplicatorStats"
+  }
+]]]></param>
+        <param name="seriesTitle" value="Serie" />
+        <param name="title" value="My code duplicates" />
+      </parameters>
+    </extension>
+  </project-extensions>
+  <cleanup />
+</project>
+
