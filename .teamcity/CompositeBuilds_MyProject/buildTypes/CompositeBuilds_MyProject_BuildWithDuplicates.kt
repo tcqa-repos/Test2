@@ -52,7 +52,7 @@ object CompositeBuilds_MyProject_BuildWithDuplicates : BuildType({
             distinguishLiterals = true
             extractSubexpressions = true
             includeTestSources = true
-            param("idea.app.home", "%teamcity.tool.intellij.ideaIU-teamcity-2018.1%")
+            param("idea.app.home", "%teamcity.tool.idea%")
         }
     }
 
