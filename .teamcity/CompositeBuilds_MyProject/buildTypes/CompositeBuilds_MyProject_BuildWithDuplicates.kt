@@ -19,8 +19,8 @@ object CompositeBuilds_MyProject_BuildWithDuplicates : BuildType({
         ideaRunner {
             pathToProject = ""
             jdk {
-                name = "1.7"
-                path = "%env.JDK_17%"
+                name = "1.8"
+                path = "%env.JDK_18%"
                 patterns("jre/lib/*.jar", "jre/lib/ext/jfxrt.jar")
                 extAnnotationPatterns("%teamcity.tool.idea%/lib/jdkAnnotations.jar")
             }
